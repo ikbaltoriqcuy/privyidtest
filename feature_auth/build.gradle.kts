@@ -47,4 +47,5 @@ dependencies {
 
     implementation(project(Modules.COMMON_BASE))
     implementation(project(Modules.UI_HELPER))
+    implementation(project(Modules.UTIL))
 }

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_32"
+    tools:context=".ui.otp.ActivityOTP">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/OTP_TITLE"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26999998"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lytOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle">
+
+        <EditText
+            android:id="@+id/edOTPOne"
+            android:layout_width="@dimen/dimen_64"
+            android:layout_height="@dimen/dimen_64"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLength="1"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edOTPTwo"
+            android:layout_width="@dimen/dimen_64"
+            android:layout_height="@dimen/dimen_64"
+            android:layout_marginStart="@dimen/dimen_32"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLength="1"
+            app:layout_constraintStart_toEndOf="@+id/edOTPOne"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edOTPThree"
+            android:layout_width="@dimen/dimen_64"
+            android:layout_height="@dimen/dimen_64"
+            android:layout_marginStart="@dimen/dimen_32"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLength="1"
+            app:layout_constraintStart_toEndOf="@+id/edOTPTwo"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edOTPFour"
+            android:layout_width="@dimen/dimen_64"
+            android:layout_height="@dimen/dimen_64"
+            android:layout_marginStart="@dimen/dimen_32"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLength="1"
+            app:layout_constraintStart_toEndOf="@+id/edOTPThree"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Button.Primary"
+        android:id="@+id/btnVerification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/OTP_BTN_VERIFY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lytOTP" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextLink"
+        android:id="@+id/btnReplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/OTP_BTN_RETRY_OTP"
+        app:layout_constraintEnd_toEndOf="@+id/btnVerification"
+        app:layout_constraintStart_toStartOf="@+id/btnVerification"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerification" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

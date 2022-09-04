@@ -12,4 +12,7 @@
     <string name="REGISTRATION_PASSWORD_HINT">Password</string>
     <string name="REGISTRATION_COUNTRY_HINT">Country</string>
     <string name="REGISTRATION_BTN_REGISTER">Register</string>
+
+    <string name="OTP_TITLE">Percobaan OTP</string>
+    <string name="OTP_BTN_RETRY_OTP">Kirim Ulang Kode OTP</string>
 </resources>

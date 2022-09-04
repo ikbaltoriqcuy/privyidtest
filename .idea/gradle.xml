@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/common_base" />
             <option value="$PROJECT_DIR$/feature_auth" />
             <option value="$PROJECT_DIR$/ui_helper" />
+            <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
       </GradleProjectSettings>

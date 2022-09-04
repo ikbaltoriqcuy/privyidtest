@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
+            android:name=".ui.otp.ActivityOTP"
+            android:exported="false" />
+        <activity
             android:name=".ui.login.ActivityLogin"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.register.ActivityRegister"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>
