@@ -1,0 +1,1 @@
+/Users/ikbaltoriq/Documents/privy/privyidtest/buildSrc/build/classes/kotlin/main/com/example/buildsrc/Dependecies.class:/Users/ikbaltoriq/Documents/privy/privyidtest/buildSrc/build/classes/kotlin/main/com/example/buildsrc/Modules.class
