@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">ui_helper</string>
-    <string name="LOGIN_USERNAME_HINT">Username</string>
+    <string name="LOGIN_PHONE_HINT">Phone</string>
     <string name="LOGIN_PASSWOD_HINT">password</string>
     <string name="LOGIN_BTN_TEXT">Login</string>
     <string name="LOGIN_TITLE">Login</string>
+
+    <string name="REGISTRATION_TITLE">Registration</string>
+    <string name="REGISTRATION_PHONE_HINT">Phone</string>
+    <string name="REGISTRATION_PASSWORD_HINT">Phone</string>
+    <string name="REGISTRATION_COUNTRY_HONT">country</string>
 </resources>

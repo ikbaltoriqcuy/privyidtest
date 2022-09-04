@@ -24,21 +24,21 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [
-                    appTheme    : "@themes/AppTheme"
+                    appTheme    : "@style/AppTheme"
             ]
         }
         stage {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [
-                    appTheme    : "@themes/AppTheme"
+                    appTheme    : "@style/AppTheme"
             ]
         }
-        dev {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [
-                    appTheme    : "@themes/AppTheme"
+                    appTheme    : "@style/AppTheme"
             ]
         }
     }
@@ -65,4 +65,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation project(Modules.FEATURE_AUTH)
+    implementation project(Modules.COMMON_BASE)
+    implementation project(Modules.UI_HELPER)
 }

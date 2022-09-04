@@ -13,7 +13,7 @@
         android:id="@+id/lblTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/LOGIN_TITLE"
+        android:text="@string/REGISTRATION_TITLE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_16"
-        android:hint="@string/LOGIN_PHONE_HINT"
+        android:hint="@string/REGISTRATION_PHONE_HINT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTitle"
@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_16"
-        android:hint="@string/LOGIN_PASSWOD_HINT"
+        android:hint="@string/REGISTRATION_PASSWORD_HINT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilUsername"
@@ -59,6 +59,28 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/tilOutlined"
+        android:id="@+id/tilCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:hint="@string/REGISTRATION_COUNTRY_HONT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edCountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
     <androidx.appcompat.widget.AppCompatButton
         style="@style/Button.Primary"
         android:id="@+id/btNLogin"
@@ -67,6 +89,6 @@
         android:layout_marginTop="@dimen/dimen_16"
         android:text="@string/LOGIN_BTN_TEXT"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tilCountry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
