@@ -10,16 +10,10 @@
         android:supportsRtl="true">
         <activity
             android:name=".ui.login.ActivityLogin"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".ui.register.ActivityRegister"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
     </application>
 
 </manifest>

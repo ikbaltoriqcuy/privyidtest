@@ -35,7 +35,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edUsername"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,9 +60,31 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblNotRegistered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/LOGIN_NOT_REGISTERED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextLink"
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:text="@string/LOGIN_BTN_REGISTER"
+        app:layout_constraintStart_toEndOf="@+id/lblNotRegistered"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
     <androidx.appcompat.widget.AppCompatButton
         style="@style/Button.Primary"
-        android:id="@+id/btNLogin"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_16"

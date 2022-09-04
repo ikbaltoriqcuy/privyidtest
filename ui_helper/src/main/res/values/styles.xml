@@ -22,6 +22,10 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="TextLink">
+        <item name="android:textColor">@color/blue_link</item>
+    </style>
+
     <style name="TextHeader">
         <item name="android:textSize">@dimen/sp_26</item>
     </style>

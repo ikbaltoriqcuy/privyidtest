@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">ui_helper</string>
     <string name="LOGIN_PHONE_HINT">Phone</string>
-    <string name="LOGIN_PASSWOD_HINT">password</string>
+    <string name="LOGIN_PASSWOD_HINT">Password</string>
     <string name="LOGIN_BTN_TEXT">Login</string>
     <string name="LOGIN_TITLE">Login</string>
+    <string name="LOGIN_NOT_REGISTERED">Belum punya akun?</string>
+    <string name="LOGIN_BTN_REGISTER">Daftar</string>
 
     <string name="REGISTRATION_TITLE">Registration</string>
     <string name="REGISTRATION_PHONE_HINT">Phone</string>
-    <string name="REGISTRATION_PASSWORD_HINT">Phone</string>
-    <string name="REGISTRATION_COUNTRY_HONT">country</string>
+    <string name="REGISTRATION_PASSWORD_HINT">Password</string>
+    <string name="REGISTRATION_COUNTRY_HINT">Country</string>
+    <string name="REGISTRATION_BTN_REGISTER">Register</string>
 </resources>
