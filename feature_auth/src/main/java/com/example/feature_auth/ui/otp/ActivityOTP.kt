@@ -1,5 +1,6 @@
 package com.example.feature_auth.ui.otp
 
+import android.content.Intent
 import android.graphics.Color
 import com.example.common_base.BaseActivity
 import com.example.feature_auth.R
@@ -28,7 +29,7 @@ class ActivityOTP : BaseActivity() {
             }
         }
         btnVerification.setOnClickListener {
-
+            gotoMain()
         }
         btnReplay.setOnClickListener {
         }
@@ -50,6 +51,12 @@ class ActivityOTP : BaseActivity() {
         }
         listOTP[currentPosOTP].isEnabled = true
         listOTP[currentPosOTP].requestFocus()
+    }
+
+    fun gotoMain() {
+        val i = Intent()
+        i.setClassName("com.example.privytest","com.example.privytest.ui.ActivityMain")
+        startActivity(i)
     }
 
     //disable back

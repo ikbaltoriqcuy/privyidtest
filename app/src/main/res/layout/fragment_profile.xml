@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/dimen_8"
+        app:navigationIcon="@drawable/ic_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextLink"
+            android:id="@+id/btnAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PROFILE_EDIT"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/dimen_16"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragment.FragmentProfile">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCover"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/dimen_64"
+                android:layout_height="@dimen/dimen_64"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintBottom_toBottomOf="@+id/imgCover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCover" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPickProfile"
+                android:layout_width="@dimen/dimen_32"
+                android:layout_height="@dimen/dimen_32"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@+id/imgCover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.56"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblProifle"
+                style="@style/TextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_INFO_TITLE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_NAME"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblProifle" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblNameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblName"
+                app:layout_constraintTop_toBottomOf="@+id/lblName"
+                tools:text="Ikbal Toriq" />
+
+            <View
+                android:id="@+id/dividerOne"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblNameValue" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_GENDER"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerOne" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblGenderValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblGender"
+                app:layout_constraintTop_toBottomOf="@+id/lblGender"
+                tools:text="Laki Laki" />
+
+            <View
+                android:id="@+id/dividerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblGenderValue" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblBirthDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_BIRTH_DATE"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerTwo" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblBirthDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblBirthDate"
+                app:layout_constraintTop_toBottomOf="@+id/lblBirthDate"
+                tools:text="03 Maret 1997" />
+
+            <View
+                android:id="@+id/dividerThree"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblBirthDateValue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_PLACE"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerThree" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblPlaceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblPlace"
+                app:layout_constraintTop_toBottomOf="@+id/lblPlace"
+                tools:text="Pasuruan" />
+
+            <View
+                android:id="@+id/dividerFour"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblPlaceValue" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_BIOGRAFI"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerFour" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblBioValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblBio"
+                app:layout_constraintTop_toBottomOf="@+id/lblBio"
+                tools:text="Senang coding" />
+
+            <View
+                android:id="@+id/dividerFive"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblBioValue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblEducation"
+                style="@style/TextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_EDUCATION"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerFive" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblSchoolName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_SCHOOL_NAME"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblEducation" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblSchoolNameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblSchoolName"
+                app:layout_constraintTop_toBottomOf="@+id/lblSchoolName"
+                tools:text="Telkom Uniersity" />
+
+            <View
+                android:id="@+id/dividerSix"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblSchoolNameValue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblGraduationTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_GRADUATE_TIME"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerSix" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblGraduationTimeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblGraduationTime"
+                app:layout_constraintTop_toBottomOf="@+id/lblGraduationTime"
+                tools:text="03 April 2019" />
+
+            <View
+                android:id="@+id/dividerSeven"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblGraduationTimeValue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblCareer"
+                style="@style/TextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_CAREER"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerSeven" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblPositionCareer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_POSITION_CAREER"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblCareer" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblPositionCareerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblPositionCareer"
+                app:layout_constraintTop_toBottomOf="@+id/lblPositionCareer"
+                tools:text="Android Developer" />
+
+            <View
+                android:id="@+id/dividerEight"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblPositionCareerValue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblCompanyCareer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_COMPANY_NAME"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerEight" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblCompanyCareerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblCompanyCareer"
+                app:layout_constraintTop_toBottomOf="@+id/lblCompanyCareer"
+                tools:text="Android Developer" />
+
+            <View
+                android:id="@+id/dividerNine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblCompanyCareerValue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblStartCareer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_START_CAREER"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerNine" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblStartCareerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/lblStartCareer"
+                app:layout_constraintTop_toBottomOf="@+id/lblStartCareer"
+                tools:text="03 Agustus 2019" />
+
+            <View
+                android:id="@+id/dividerTen"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_line"
+                app:layout_constraintTop_toBottomOf="@+id/lblStartCareerValue" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblEndCareer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/PROFILE_END_CAREER"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerTen" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lblEndCareerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/sp_12"
+                android:layout_marginBottom="@dimen/dimen_32"
+                app:layout_constraintStart_toStartOf="@+id/lblEndCareer"
+                app:layout_constraintTop_toBottomOf="@+id/lblEndCareer"
+                tools:text="03 Agustus 2019" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

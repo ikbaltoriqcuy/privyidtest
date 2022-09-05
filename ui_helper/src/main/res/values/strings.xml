@@ -15,4 +15,23 @@
 
     <string name="OTP_TITLE">Percobaan OTP</string>
     <string name="OTP_BTN_RETRY_OTP">Kirim Ulang Kode OTP</string>
+
+    <string name="HOME_NOTHING">Nothing here...</string>
+
+    <string name="PROFILE_EDIT">Edit</string>
+    <string name="PROFILE_SAVE">Save</string>
+    <string name="PROFILE_INFO_TITLE">Profile</string>
+    <string name="PROFILE_NAME">Nama</string>
+    <string name="PROFILE_GENDER">Jenis Kelamin</string>
+    <string name="PROFILE_PLACE">Tempat Tinggal</string>
+    <string name="PROFILE_EDUCATION">Education</string>
+    <string name="PROFILE_SCHOOL_NAME">Sekolah</string>
+    <string name="PROFILE_GRADUATE_TIME">Tahun Lulus</string>
+    <string name="PROFILE_CAREER">Career</string>
+    <string name="PROFILE_POSITION_CAREER">Posisi</string>
+    <string name="PROFILE_START_CAREER">Tanggal Masuk</string>
+    <string name="PROFILE_END_CAREER">Tanggal Keluar</string>
+    <string name="PROFILE_BIRTH_DATE">Tanggal Lahir</string>
+    <string name="PROFILE_BIOGRAFI">Biografi</string>
+    <string name="PROFILE_COMPANY_NAME">Nama Perusahaan</string>
 </resources>

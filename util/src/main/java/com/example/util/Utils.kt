@@ -2,7 +2,9 @@ package com.example.util
 
 import android.util.Log
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.Fragment
 
 object Utils {
     fun Int.toMinus() = this ?: -1
@@ -19,5 +21,16 @@ object Utils {
                 action(it.toString())
             }
         )
+    }
+
+    fun AppCompatActivity.replaceFragment(
+        containerViewId: Int,
+        fragment: Fragment?) {
+        fragment?.let {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(containerViewId, it)
+                .commit()
+        }
     }
 }
