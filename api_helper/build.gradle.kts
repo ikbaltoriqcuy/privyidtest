@@ -42,5 +42,6 @@ dependencies {
     implementation(Dependecies.retrofit)
     implementation(Dependecies.chuck)
     implementation(Dependecies.gson)
+    implementation(Dependecies.gsonConverter)
     implementation(Dependecies.coinViewmodel)
 }

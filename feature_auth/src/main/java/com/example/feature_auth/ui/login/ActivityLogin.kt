@@ -1,6 +1,7 @@
 package com.example.feature_auth.ui.login
 
 import android.content.Intent
+import android.view.View
 import android.widget.Toast
 import com.example.common_base.BaseActivity
 import com.example.feature_auth.R
@@ -20,6 +21,11 @@ class ActivityLogin : BaseActivity() {
 
     private fun setupObserver() {
         with(viewModel) {
+            isLoading.observe(this@ActivityLogin) {
+                btnLogin.isEnabled = !it
+                pbLoading.visibility = if (it) View.VISIBLE
+                                        else View.GONE
+            }
             route.observe(this@ActivityLogin) {
                 when (it) {
                     LoginViewModel.ROUTE_REGISTER -> {

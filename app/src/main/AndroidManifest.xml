@@ -19,7 +19,7 @@
         android:theme="${appTheme}"
         tools:targetApi="31">
         <activity
-            android:name=".ui.ActivityMain"
+            android:name=".ui.main.ActivityMain"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>

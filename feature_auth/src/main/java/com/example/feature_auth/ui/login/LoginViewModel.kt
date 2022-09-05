@@ -3,11 +3,11 @@ package com.example.feature_auth.ui.login
 import android.os.Build
 import com.example.api_helper.apiservice.RepositoryAPI
 import com.example.common_base.BaseViewModel
+import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,17 +17,17 @@ class LoginViewModel(val repository: RepositoryAPI): BaseViewModel() {
     fun login(phone: String, password: String) {
         GlobalScope.launch {
             withContext(Dispatchers.Main) {
+                isLoading.value = true
                 repository.login(
                         phone,
                         password,
-                        "0",
-                        phone + Build.DEVICE + Build.ID,
-                        DEVICE_TYPE
-                ).enqueue(object : Callback<JSONObject> {
+                        phone + Build.DEVICE + Build.ID
+                ).enqueue(object : Callback<JsonObject> {
                     override fun onResponse(
-                        call: Call<JSONObject>,
-                        response: Response<JSONObject>
+                        call: Call<JsonObject>,
+                        response: Response<JsonObject>
                     ) {
+                        isLoading.value = false
                         if (response.isSuccessful) {
                             route.value = ROUTE_MAIN
                         } else {
@@ -35,7 +35,8 @@ class LoginViewModel(val repository: RepositoryAPI): BaseViewModel() {
                         }
                     }
 
-                    override fun onFailure(call: Call<JSONObject>, t: Throwable) {
+                    override fun onFailure(call: Call<JsonObject>, t: Throwable) {
+                        isLoading.value = false
                         route.value = ROUTE_FAILED
                     }
                 })

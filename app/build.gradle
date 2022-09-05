@@ -65,6 +65,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.1'
     implementation Dependecies.retrofit
     implementation Dependecies.coinViewmodel
+    implementation Dependecies.hawk
     implementation project(Modules.FEATURE_AUTH)
     implementation project(Modules.COMMON_BASE)
     implementation project(Modules.UI_HELPER)

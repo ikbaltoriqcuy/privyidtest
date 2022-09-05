@@ -44,6 +44,7 @@ dependencies {
     implementation(Dependecies.circleImage)
     implementation(Dependecies.coinViewmodel)
     implementation(Dependecies.retrofit)
+    implementation(Dependecies.gson)
 
     implementation(project(Modules.COMMON_BASE))
     implementation(project(Modules.UI_HELPER))
