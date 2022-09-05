@@ -33,8 +33,8 @@ class RegisterViewModel(val repository: RepositoryAPI): BaseViewModel() {
                         call: Call<JsonObject>,
                         response: Response<JsonObject>
                     ) {
+                        isLoading.value = false
                         if (response.isSuccessful) {
-                            isLoading.value = false
                             if (response.code() == 201) {
                                 response.body()?.let {
                                     route.value = ROUTE_OTP

@@ -78,9 +78,7 @@ class OTPViewModel(val repository: RepositoryAPI): BaseViewModel() {
                         response: Response<JsonObject>
                     ) {
                         isLoading.value = false
-                        if (response.isSuccessful) {
-                            route.value = ROUTE_MAIN
-                        } else {
+                        if (!response.isSuccessful) {
                             route.value = ROUTE_FAILED
                         }
                     }

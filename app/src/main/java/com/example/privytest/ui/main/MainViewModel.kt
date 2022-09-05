@@ -9,7 +9,7 @@ class MainViewModel(val repository: RepositoryAPI): BaseViewModel() {
     init { checkRoute() }
 
     fun checkRoute() {
-        if (Hawkutil.getPhone().isNullOrEmpty())
+        if (Hawkutil.getToken().isNullOrEmpty())
             route.value = ROUTE_LOGIN
     }
 
