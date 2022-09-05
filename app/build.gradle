@@ -63,6 +63,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.1'
+    implementation Dependecies.fcm
     implementation Dependecies.retrofit
     implementation Dependecies.coinViewmodel
     implementation Dependecies.hawk

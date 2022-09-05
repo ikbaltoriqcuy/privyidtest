@@ -33,6 +33,7 @@ class LoginViewModel(val repository: RepositoryAPI): BaseViewModel() {
                         isLoading.value = false
                         if (response.isSuccessful) {
                             route.value = ROUTE_MAIN
+                            if (response.code() == 201)
                             response.body()?.let {
                                 val user = Gson().fromJson(
                                     it.getAsJsonObject("data").getAsJsonObject("user").toString(),

@@ -138,12 +138,12 @@ class ProfileViewModel(val repository: RepositoryAPI): BaseViewModel() {
                         isLoading.value = false
                         if (response.isSuccessful) {
                         } else {
-                            message.value = "Gagal Logout"
+                            message.value = "Gagal Mendaptkan Profile"
                         }
                     }
 
                     override fun onFailure(call: Call<JsonObject>, t: Throwable) {
-                        message.value = "Gagal Logout"
+                        message.value = "Gagal Mendaptkan Profile"
                     }
                 })
 

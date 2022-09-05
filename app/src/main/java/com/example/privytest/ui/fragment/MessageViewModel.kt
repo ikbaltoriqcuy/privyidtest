@@ -1,9 +1,10 @@
-package com.example.feature_auth.ui.otp
+package com.example.privytest.ui.fragment
 
 import androidx.lifecycle.MutableLiveData
 import com.example.api_helper.apiservice.RepositoryAPI
 import com.example.common_base.BaseViewModel
 import com.example.feature_auth.model.User
+import com.example.feature_auth.ui.otp.OTPViewModel
 import com.example.util.Hawkutil
 import com.google.gson.Gson
 import com.google.gson.JsonObject
@@ -15,26 +16,22 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class OTPViewModel(val repository: RepositoryAPI): BaseViewModel() {
+class MessageViewModel(val repository: RepositoryAPI): BaseViewModel() {
 
-    var otpValue = "    "
-    var message = MutableLiveData<String>()
+    init {
+        sendMessage()
+        getMessage()
+    }
 
-    init { resendOtp() }
+    val message = MutableLiveData<String>()
 
-    fun matchOtp() {
-
-        if (otpValue.length < 4) {
-            message.value = "OTP belum terisi"
-            return
-        }
-
+    fun sendMessage() {
         GlobalScope.launch {
             withContext(Dispatchers.Main) {
                 isLoading.value = true
-                repository.matchOtp(
+                repository.sendMessage(
                     Hawkutil.getUserID(),
-                    otpValue,
+                    "test"
                 ).enqueue(object : Callback<JsonObject> {
                     override fun onResponse(
                         call: Call<JsonObject>,
@@ -42,23 +39,13 @@ class OTPViewModel(val repository: RepositoryAPI): BaseViewModel() {
                     ) {
                         isLoading.value = false
                         if (response.isSuccessful) {
-                            response.body()?.let {
-                                val user = Gson().fromJson(
-                                    it.getAsJsonObject("data").getAsJsonObject("user").toString(),
-                                    User::class.java
-                                )
-                                Hawkutil.setPhone(user.phone)
-                                Hawkutil.setToken(user.accessToken)
-                            }
-                            route.value = ROUTE_MAIN
                         } else {
-                            route.value = ROUTE_FAILED
+                            message.value = "Gagal menyimpan profile"
                         }
                     }
 
                     override fun onFailure(call: Call<JsonObject>, t: Throwable) {
-                        isLoading.value = false
-                        route.value = ROUTE_FAILED
+                        message.value = "Gagal menyimpan profile"
                     }
                 })
 
@@ -66,12 +53,13 @@ class OTPViewModel(val repository: RepositoryAPI): BaseViewModel() {
         }
     }
 
-    fun resendOtp() {
+
+    fun getMessage() {
         GlobalScope.launch {
             withContext(Dispatchers.Main) {
                 isLoading.value = true
-                repository.resendOtp(
-                    Hawkutil.getPhone()
+                repository.getMessage(
+                    Hawkutil.getUserID()
                 ).enqueue(object : Callback<JsonObject> {
                     override fun onResponse(
                         call: Call<JsonObject>,
@@ -79,27 +67,22 @@ class OTPViewModel(val repository: RepositoryAPI): BaseViewModel() {
                     ) {
                         isLoading.value = false
                         if (response.isSuccessful) {
-                            route.value = ROUTE_MAIN
                         } else {
-                            route.value = ROUTE_FAILED
+                            message.value = "Gagal menyimpan profile"
                         }
                     }
 
                     override fun onFailure(call: Call<JsonObject>, t: Throwable) {
-                        isLoading.value = false
-                        route.value = ROUTE_FAILED
+                        message.value = "Gagal menyimpan profile"
                     }
                 })
 
             }
         }
     }
+
 
     companion object {
-        const val ROUTE_REGISTER = "register"
-        const val ROUTE_MAIN = "main"
-        const val ROUTE_FAILED = "failed"
-
-        const val DEVICE_TYPE = 1
+        const val ROUTE_LOGIN = "login"
     }
 }

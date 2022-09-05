@@ -8,7 +8,6 @@ import java.util.*
 
 interface ServiceApi {
 
-    @FormUrlEncoded
     @GET("v1/message/{user_id}")
     fun getMessage(
         @Header("Authorization") auth: String,

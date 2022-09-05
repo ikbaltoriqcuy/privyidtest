@@ -91,6 +91,18 @@ class RepositoryAPI(val context: Context) {
         )
 
 
+    fun getMessage(userId: String): Call<JsonObject> =
+        RetrofitAPI.getRetrofitApi(context).getMessage(
+            Hawkutil.getToken(),
+            userId
+        )
+
+    fun sendMessage(userId: String, message: String): Call<JsonObject> =
+        RetrofitAPI.getRetrofitApi(context).sendMessage(
+            Hawkutil.getToken(),
+            userId,
+            message
+        )
 
     companion object {
         const val INDOSIAN_COUNTRY = "Indonesia"

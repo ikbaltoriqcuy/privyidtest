@@ -44,7 +44,7 @@ class RegisterViewModel(val repository: RepositoryAPI): BaseViewModel() {
                                         User::class.java
                                     )
                                     Hawkutil.run {
-                                        setUserID(user.id)
+                                        setUserID(user.id.toString())
                                         setPhone(user.phone)
                                     }
                                 }

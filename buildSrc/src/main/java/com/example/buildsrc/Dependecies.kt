@@ -9,4 +9,5 @@ object Dependecies {
     const val circleImage = "de.hdodenhof:circleimageview:3.1.0"
     const val coinViewmodel = "org.koin:koin-androidx-viewmodel:2.0.1"
     const val hawk = "com.orhanobut:hawk:2.0.1"
+    const val fcm = "com.google.firebase:firebase-messaging-ktx:23.0.8"
 }
