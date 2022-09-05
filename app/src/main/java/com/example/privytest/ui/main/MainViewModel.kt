@@ -9,9 +9,7 @@ class MainViewModel(val repository: RepositoryAPI): BaseViewModel() {
     init { checkRoute() }
 
     fun checkRoute() {
-        if (!Hawkutil.getPhone().isNullOrEmpty() && !Hawkutil.getFinishRegsiter())
-            route.value = ROUTE_OTP
-        else
+        if (Hawkutil.getPhone().isNullOrEmpty())
             route.value = ROUTE_LOGIN
     }
 

@@ -83,7 +83,7 @@ class ActivityOTP : BaseActivity() {
 
     fun gotoMain() {
         val i = Intent()
-        i.setClassName("com.example.privytest","com.example.privytest.ui.ActivityMain")
+        i.setClassName("com.example.privytest","com.example.privytest.ui.main.ActivityMain")
         startActivity(i)
     }
 

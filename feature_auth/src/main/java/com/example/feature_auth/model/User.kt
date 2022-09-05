@@ -16,7 +16,9 @@ data class User(
     @SerializedName("country")
     val country: String,
     @SerializedName("user_device")
-    val userDevice: UserDevice
+    val userDevice: UserDevice,
+    @SerializedName("access_token")
+    val accessToken: String
 )
 
 data class UserDevice(

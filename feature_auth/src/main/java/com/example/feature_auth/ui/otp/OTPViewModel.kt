@@ -3,7 +3,9 @@ package com.example.feature_auth.ui.otp
 import androidx.lifecycle.MutableLiveData
 import com.example.api_helper.apiservice.RepositoryAPI
 import com.example.common_base.BaseViewModel
+import com.example.feature_auth.model.User
 import com.example.util.Hawkutil
+import com.google.gson.Gson
 import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -71,6 +73,13 @@ class OTPViewModel(val repository: RepositoryAPI): BaseViewModel() {
                         isLoading.value = false
                         if (response.isSuccessful) {
                             route.value = ROUTE_MAIN
+                            response.body()?.let {
+                                val user = Gson().fromJson(
+                                    it.getAsJsonObject("data").getAsJsonObject("user").toString(),
+                                    User::class.java
+                                )
+                                Hawkutil.setToken(user.accessToken)
+                            }
                         } else {
                             route.value = ROUTE_FAILED
                         }

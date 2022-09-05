@@ -46,7 +46,6 @@ class RegisterViewModel(val repository: RepositoryAPI): BaseViewModel() {
                                     Hawkutil.run {
                                         setUserID(user.id)
                                         setPhone(user.phone)
-                                        setToken(user.userDevice.deviceToken)
                                     }
                                 }
                             }

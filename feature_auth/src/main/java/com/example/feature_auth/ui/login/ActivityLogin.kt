@@ -31,7 +31,7 @@ class ActivityLogin : BaseActivity() {
                     LoginViewModel.ROUTE_REGISTER -> {
                         gotoRegister()
                     }
-                    LoginViewModel.ROUTE_MAIN -> {}
+                    LoginViewModel.ROUTE_MAIN -> gotoMain()
                     LoginViewModel.ROUTE_FAILED -> {
                         Toast.makeText(this@ActivityLogin, "Gagal Load Data, Coba lagi", Toast.LENGTH_SHORT).show()
                     }
@@ -50,6 +50,12 @@ class ActivityLogin : BaseActivity() {
         btnRegister.setOnClickListener {
             viewModel.route.value = LoginViewModel.ROUTE_REGISTER
         }
+    }
+
+    private fun gotoMain() {
+        val i = Intent()
+        i.setClassName("com.example.privytest","com.example.privytest.ui.main.ActivityMain")
+        startActivity(i)
     }
 
     private fun gotoRegister() {
