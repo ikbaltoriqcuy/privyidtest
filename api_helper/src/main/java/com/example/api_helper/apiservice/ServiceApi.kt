@@ -59,8 +59,8 @@ interface ServiceApi {
         @Header("Authorization") auth: String,
         @Field("position") position: String,
         @Field("company_name") companyName: String,
-        @Field("starting_from") startingFrom: Date,
-        @Field("ending_in") endingIn: Date
+        @Field("starting_from") startingFrom: String,
+        @Field("ending_in") endingIn: String
     ): Call<JsonObject>
 
     @FormUrlEncoded
@@ -68,7 +68,7 @@ interface ServiceApi {
     fun updateEducation(
         @Header("Authorization") auth: String,
         @Field("school_name") position: String,
-        @Field("graduation_time") companyName: Date
+        @Field("graduation_time") companyName: String
     ): Call<JsonObject>
 
     @FormUrlEncoded
@@ -77,12 +77,11 @@ interface ServiceApi {
         @Header("Authorization") auth: String,
         @Field("name") name: String,
         @Field("gender") gender: Int,
-        @Field("birthday") birthday: Date,
+        @Field("birthday") birthday: String,
         @Field("hometown") hometown: String,
         @Field("bio") bio: String
     ): Call<JsonObject>
 
-    @FormUrlEncoded
     @GET("v1/profile/me")
     fun getProfile(
         @Header("Authorization") auth: String,

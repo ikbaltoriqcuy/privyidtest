@@ -42,4 +42,8 @@ object Hawkutil {
 
     fun getFinishRegsiter(): Boolean =
         Hawk.get<Boolean?>(KEY_STATUS_FINISH_REGIS) ?: false
+
+    fun clearAll() {
+        Hawk.deleteAll()
+    }
 }

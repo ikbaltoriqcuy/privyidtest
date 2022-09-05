@@ -44,4 +44,5 @@ dependencies {
     implementation(Dependecies.gson)
     implementation(Dependecies.gsonConverter)
     implementation(Dependecies.coinViewmodel)
+    implementation(project(Modules.UTIL))
 }

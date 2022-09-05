@@ -20,6 +20,7 @@
 
     <string name="PROFILE_EDIT">Edit</string>
     <string name="PROFILE_SAVE">Save</string>
+    <string name="PROFILE_LOGOUT">LogOut</string>
     <string name="PROFILE_INFO_TITLE">Profile</string>
     <string name="PROFILE_NAME">Nama</string>
     <string name="PROFILE_GENDER">Jenis Kelamin</string>
