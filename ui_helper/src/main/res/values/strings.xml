@@ -34,4 +34,5 @@
     <string name="PROFILE_BIRTH_DATE">Tanggal Lahir</string>
     <string name="PROFILE_BIOGRAFI">Biografi</string>
     <string name="PROFILE_COMPANY_NAME">Nama Perusahaan</string>
+    <string name="FAILED_LOAD_DATA">Gagal Load Data, Coba lagi</string>
 </resources>

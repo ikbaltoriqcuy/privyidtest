@@ -63,10 +63,11 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.1'
-    implementation Dependecies.coin
+    implementation Dependecies.retrofit
     implementation Dependecies.coinViewmodel
     implementation project(Modules.FEATURE_AUTH)
     implementation project(Modules.COMMON_BASE)
     implementation project(Modules.UI_HELPER)
     implementation project(Modules.UTIL)
+    implementation project(Modules.API_HELPER)
 }

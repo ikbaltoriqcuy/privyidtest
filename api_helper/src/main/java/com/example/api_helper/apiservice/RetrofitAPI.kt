@@ -9,18 +9,18 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitAPI {
     const val baseURL = "http://pretest-qa.dcidev.id/api/"
-    fun Context.getRetrofitApi(): ServiceApi {
 
+    fun getRetrofitApi(context: Context): ServiceApi {
         val okHttpChannel = OkHttpClient.Builder()
             .connectTimeout(20, TimeUnit.SECONDS)
             .readTimeout(20, TimeUnit.SECONDS)
             .writeTimeout(20, TimeUnit.SECONDS)
             .cache(null)
-            .addInterceptor(ChuckInterceptor(this))
+            .addInterceptor(ChuckInterceptor(context))
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://pretest-qa.dcidev.id/api/")
+            .baseUrl(baseURL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpChannel)
             .build()

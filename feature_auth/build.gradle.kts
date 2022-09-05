@@ -42,10 +42,11 @@ dependencies {
     implementation("com.google.android.material:material:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation(Dependecies.circleImage)
-    implementation(Dependecies.coin)
     implementation(Dependecies.coinViewmodel)
+    implementation(Dependecies.retrofit)
 
     implementation(project(Modules.COMMON_BASE))
     implementation(project(Modules.UI_HELPER))
     implementation(project(Modules.UTIL))
+    implementation(project(Modules.API_HELPER))
 }

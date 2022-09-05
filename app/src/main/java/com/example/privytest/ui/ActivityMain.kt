@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class ActivityMain : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     override fun setLayoutId(): Int = R.layout.activity_main
     override fun initView() {
-        //gotoLogin()
+        gotoLogin()
         setupBottomNavigation()
     }
 
